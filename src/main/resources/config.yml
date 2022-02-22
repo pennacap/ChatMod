@@ -1,0 +1,53 @@
+
+
+blacklisted-words:
+
+# Add words to the list like
+# - swearWord
+
+mask: true
+# true - Mask the blacklisted words
+# false - Block the chat message from being sent
+
+isLockedDown: false
+
+# This is set by the command /lockdown and /unlockdown
+# But you can set it manually and restart the server.
+
+mask-char: '*'
+
+# The character to mask the blacklisted word with
+# Only applies if mask is set to true
+
+broadcast-lockdown: true
+
+# Broadcast a message when chat is locked down or unlocked.
+
+
+# For the colors in the below messages, add a section sign (§)
+# And the color code (https://minecraft.fandom.com/wiki/Formatting_codes)
+
+
+
+lockdown-message: '§aLocked down chat!'
+# Used when /lockdown is run
+
+unlockdown-message: '§aUnlocked chat!'
+# Used when /unlockdown is run
+
+lockdown-error-message: '§cThe server is locked down!'
+# Used when someone tries to speak during lockdown
+
+blacklist-error-message: "§cYou can't say that!"
+# Used when someone says a blacklisted word
+# And mask is set to false
+
+lockdown-broadcast: "§c§lChat is now locked down!"
+
+# Broadcasted when the chat is locked down
+# And the broadcast-lockdown setting is true
+
+unlockdown-broadcast: "§a§lChat is now unlocked!"
+
+# Broadcasted when the chat is unlocked
+# And the broadcast-lockdown setting is true

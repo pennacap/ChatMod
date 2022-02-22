@@ -1,0 +1,31 @@
+name: ChatMod
+version: '1.0'
+main: org.pennacap.chatmod.ChatMod
+api-version: 1.16
+authors: [ pennacap ]
+description: Chat moderation to the extreme
+
+permissions:
+  chatmod.ignore:
+    description: The chat moderation ignores this person
+    default: op
+  chatmod.lockdownIgnore:
+    description: This person can speak even during lockdown
+    default: op
+  chatmod.manageLockdown:
+    description: This person can manage lockdowns
+    default: op
+
+commands:
+  lockdown:
+    description: Lockdown chat (no one can speak)
+    aliases: [ld]
+    permission: chatmod.manageLockdown
+    usage: /lockdown
+  unlockdown:
+    description: Unlockdown chat (people can speak again)
+    aliases: [uld]
+    permission: chatmod.manageLockdown
+    usage: /unlockdown
+
+
