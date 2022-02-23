@@ -20,9 +20,10 @@ mask-char: '*'
 # Only applies if mask is set to true
 
 broadcast-lockdown: true
-
 # Broadcast a message when chat is locked down or unlocked.
 
+broadcast-mute: false
+#Broadcast when someone gets muted
 
 # For the colors in the below messages, add a section sign (§)
 # And the color code (https://minecraft.fandom.com/wiki/Formatting_codes)
@@ -42,7 +43,7 @@ blacklist-error-message: "§cYou can't say that!"
 # Used when someone says a blacklisted word
 # And mask is set to false
 
-lockdown-broadcast: "§c§lChat is now locked down!"
+lockdown-broadcast: "§a§lChat is now locked down!"
 
 # Broadcasted when the chat is locked down
 # And the broadcast-lockdown setting is true
@@ -51,3 +52,33 @@ unlockdown-broadcast: "§a§lChat is now unlocked!"
 
 # Broadcasted when the chat is unlocked
 # And the broadcast-lockdown setting is true
+
+invalid-command-error: "§aInvalid usage. Usage: {usage}"
+
+# Used when an invalid command is called
+# {usage} is replaced with the usage of the command
+
+invalid-person-error: "§aInvalid person! Make sure you spelt their name correctly!"
+
+# Used when a command is called but the name/UUID passed is invalid
+
+muted-message: "§cMuted {user}!"
+# Used when /mute is called
+# {user} is replaced with the name of the user
+
+muted-broadcast: "§6{user} §awas muted by §c{moderator}!"
+# Used when /mute is called and broadcast-mute is true
+# {user} is replaced with the name of the user
+# {moderator} is replaced with the name of the moderator
+
+unmuted-message: "§cUnmuted {user}!"
+# Used when /unmute is called
+# {user} is replaced with the name of the user
+
+mute-error-message: "§aYou are muted!"
+# Used when someone who is muted speaks
+
+muted:
+
+# People who are muted
+# Managed by the plugin but can manually add UUIDs at startup

@@ -1,5 +1,5 @@
 name: ChatMod
-version: '1.0'
+version: '1.1'
 main: org.pennacap.chatmod.ChatMod
 api-version: 1.16
 authors: [ pennacap ]
@@ -15,7 +15,12 @@ permissions:
   chatmod.manageLockdown:
     description: This person can manage lockdowns
     default: op
-
+  chatmod.manageMute:
+    description: This person can manage mutes
+    default: op
+  chatmod.muteIgnore:
+    description: This person can speak even during mutes
+    default: op
 commands:
   lockdown:
     description: Lockdown chat (no one can speak)
@@ -27,5 +32,15 @@ commands:
     aliases: [uld]
     permission: chatmod.manageLockdown
     usage: /unlockdown
+  mute:
+    description: Mute a person (the person cannot speak)
+    aliases: [m]
+    permission: chatmod.manageMute
+    usage: /mute <player>
+  unmute:
+    description: Unmute a person (the person can speak again)
+    aliases: [um]
+    permission: chatmod.manageMute
+    usage: /unmute <player>
 
 
